@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const categoryModel = require('./category');
+const userModel = require('./user');
 
 const gameSchema = new mongoose.Schema({
   title: {
@@ -21,6 +23,14 @@ const gameSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  users: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: userModel,
+  }],
+  categories: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: categoryModel,
+  }],
 });
 
 module.exports = mongoose.model('game', gameSchema);

@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
-const { PORT } = require('./config');
-const { cors } = require('./middlewares/cors');
+const PORT = require('./config');
+const cors = require('./middlewares/cors');
 const bodyParser = require('body-parser');
 const usersRouter = require('./routes/users');
 const gamesRouter = require('./routes/games');
