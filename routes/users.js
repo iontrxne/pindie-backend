@@ -34,7 +34,7 @@ usersRouter.post(
 );
 
 usersRouter.put(
-  '/games/:id',
+  '/users/:id',
   updateUser,
   sendUserUpdated
 );
