@@ -2,12 +2,14 @@ const usersRouter = require('express').Router();
 const { 
   findAllUsers,
   createUser,
-  findUserById
+  findUserById,
+  updateUser
 } = require('../middlewares/users');
 const {
   sendAllUsers,
   sendUserCreated,
-  sendUserById
+  sendUserById,
+  sendUserUpdated
 } = require('../controllers/users');
 
 
@@ -29,6 +31,12 @@ usersRouter.post(
   findAllUsers,
   createUser,
   sendUserCreated
+);
+
+usersRouter.put(
+  '/games/:id',
+  updateUser,
+  sendUserUpdated
 );
 
 module.exports = usersRouter;

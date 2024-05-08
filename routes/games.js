@@ -2,13 +2,17 @@ const gamesRouter = require('express').Router();
 const { 
   sendAllGames, 
   sendGameCreated,
-  sendGameById
+  sendGameById,
+  sendGameUpdated
 } = require('../controllers/games');
 const { 
   findAllGames, 
   createGame,
-  findGameById 
+  findGameById,
+  updateGame
 } = require('../middlewares/games');
+
+
 
 gamesRouter.get(
   '/games', 
@@ -28,5 +32,11 @@ gamesRouter.post(
   createGame, 
   sendGameCreated
 );
+
+gamesRouter.put(
+  '/games/:id',
+  updateGame,
+  sendGameUpdated
+)
 
 module.exports = gamesRouter;

@@ -27,8 +27,20 @@ const findCategoryById = async (req, res, next) => {
   };
 }; 
 
+const updateCategory = async (req, res, next) => {
+  try {
+    console.log(req.body);
+    req.category = await categories.findByIdAndUpdate(req.params.id, req.body);
+    next()
+  } catch (error) {
+    res.setHeader("Content-Type", "application/json");
+    res.status(404).send(JSON.stringify({ message: "Ошибка обновления категории" }));
+  };
+};
+
 module.exports = {
   findAllCategories,
   createCategory,
   findCategoryById,
+  updateCategory,
 }; 
