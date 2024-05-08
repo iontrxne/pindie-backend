@@ -38,9 +38,21 @@ const updateCategory = async (req, res, next) => {
   };
 };
 
+const deleteCategory = async (req, res, next) => {
+  try {
+    console.log(req.body);
+    req.category = await categories.findByIdAndDelete(req.params.id);
+    next();
+  } catch (error) {
+    res.setHeader("Content-Type", "application/json");
+    res.status(400).send(JSON.stringify({ message: "Ошибка удаления категории" }));
+  }
+};
+
 module.exports = {
   findAllCategories,
   createCategory,
   findCategoryById,
   updateCategory,
+  deleteCategory,
 }; 

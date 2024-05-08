@@ -38,9 +38,21 @@ const updateUser = async (req, res, next) => {
   };
 };
 
+const deleteUser = async (req, res, next) => {
+  try {
+    console.log(req.body);
+    req.user = await users.findByIdAndDelete(req.params.id);
+    next();
+  } catch (error) {
+    res.setHeader("Content-Type", "application/json");
+    res.status(400).send(JSON.stringify({ message: "Ошибка удаления пользователя" }));
+  }
+};
+
 module.exports = { 
   findAllUsers,
   createUser,
   findUserById,
-  updateUser
+  updateUser,
+  deleteUser
 };
