@@ -91,5 +91,6 @@ module.exports = {
   updateUser,
   deleteUser,
   checkEmptyNameAndEmailAndPassword,
-  checkEmptyNameAndEmail
+  checkEmptyNameAndEmail,
+  checkIsUserExists
 };
