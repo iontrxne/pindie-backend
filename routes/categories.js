@@ -33,8 +33,8 @@ categoriesRouter.get(
 categoriesRouter.post(
   "/categories", 
   findAllCategories,
-  checkEmptyName,
   checkIsCategoryExists, 
+  checkEmptyName,
   createCategory, 
   sendCategoryCreated
 );
