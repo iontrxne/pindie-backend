@@ -35,14 +35,16 @@ gamesRouter.get(
 gamesRouter.post(
   '/games', 
   findAllGames, 
-  checkEmptyFields,
   checkIsGameExists,
+  checkIfCategoriesAvaliable,
+  checkEmptyFields,
   createGame, 
   sendGameCreated
 );
 
 gamesRouter.put(
   '/games/:id',
+  findGameById,
   checkIfUsersAreSafe,
   checkIfCategoriesAvaliable,
   checkEmptyFields,
