@@ -50,12 +50,12 @@ gamesRouter.put(
   checkEmptyFields,
   updateGame,
   sendGameUpdated
-)
+);
 
 gamesRouter.delete(
   '/games/:id',
   deleteGame,
   sendGameDeleted
-)
+);
 
 module.exports = gamesRouter;

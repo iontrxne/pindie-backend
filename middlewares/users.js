@@ -46,11 +46,11 @@ const deleteUser = async (req, res, next) => {
   } catch (error) {
     res.setHeader("Content-Type", "application/json");
     res.status(400).send(JSON.stringify({ message: "Ошибка удаления пользователя" }));
-  }
+  };
 };
 
 const checkEmptyNameAndEmailAndPassword = async (req, res, next) => {
-  if (!req.body.name || 
+  if (!req.body.username || 
       !req.body.email ||
       !req.body.password
      ) {
@@ -62,26 +62,26 @@ const checkEmptyNameAndEmailAndPassword = async (req, res, next) => {
 };
 
 const checkEmptyNameAndEmail = async (req, res, next) => {
-  if (!req.body.name || 
-      !req.body.email ||
+  if (!req.body.username || 
+      !req.body.email
      ) {
     res.setHeader("Content-Type", "application/json");
     res.status(400).send(JSON.stringify({ message: "Заполни все поля" }));
   } else {
     next();
-  }
+  };
 };
 
 const checkIsUserExists = async (req, res, next) => {
   const isInArray = req.usersArray.find((user) => {
-    return req.body.name === user.name;
+    return req.body.username === user.username;
   });
   if (isInArray) {
     res.setHeader("Content-Type", "application/json");
     res.status(400).send(JSON.stringify({ message: "Пользователь с таким именем уже существует" }));
   } else {
     next();
-  }
+  };
 }; 
   
 module.exports = { 

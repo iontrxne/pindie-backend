@@ -46,7 +46,7 @@ const deleteCategory = async (req, res, next) => {
   } catch (error) {
     res.setHeader("Content-Type", "application/json");
     res.status(400).send(JSON.stringify({ message: "Ошибка удаления категории" }));
-  }
+  };
 };
 
 const checkIsCategoryExists = async (req, res, next) => {
@@ -58,7 +58,7 @@ const checkIsCategoryExists = async (req, res, next) => {
     res.status(400).send(JSON.stringify({ message: "Категория с таким названием уже существует" }));
   } else {
     next();
-  }
+  };
 }; 
 
 const checkEmptyName = async (req, res, next) => {
@@ -67,7 +67,7 @@ const checkEmptyName = async (req, res, next) => {
     res.status(400).send(JSON.stringify({ message: "Заполни все поля" }));
   } else {
     next();
-  }
+  };
 };
 
 module.exports = {

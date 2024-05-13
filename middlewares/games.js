@@ -58,7 +58,7 @@ const deleteGame = async (req, res, next) => {
   } catch (error) {
     res.setHeader("Content-Type", "application/json");
     res.status(400).send(JSON.stringify({ message: "Ошибка удаления игры" }));
-  }
+  };
 };
 
 const checkEmptyFields = async (req, res, next) => {
@@ -73,7 +73,7 @@ const checkEmptyFields = async (req, res, next) => {
     res.status(400).send(JSON.stringify({ message: "Заполни все поля" }));
   } else {
     next();
-  }
+  };
 };
 
 const checkIfCategoriesAvaliable = async (req, res, next) => {
@@ -82,7 +82,7 @@ const checkIfCategoriesAvaliable = async (req, res, next) => {
     res.status(400).send(JSON.stringify({ message: "Выбери хотя бы одну категорию" }));
   } else {
     next();
-}
+  };
 }; 
 
 const checkIfUsersAreSafe = async (req, res, next) => {
@@ -90,13 +90,14 @@ const checkIfUsersAreSafe = async (req, res, next) => {
     next();
     return;
   }
+
   if (req.body.users.length - 1 === req.game.users.length) {
     next();
     return;
   } else {
     res.setHeader("Content-Type", "application/json");
     res.status(400).send(JSON.stringify({ message: "Нельзя удалять пользователей или добавлять больше одного пользователя" }));
-}
+  };
 }; 
 
 const checkIsGameExists = async (req, res, next) => {
@@ -108,7 +109,7 @@ const checkIsGameExists = async (req, res, next) => {
     res.status(400).send(JSON.stringify({ message: "Игра с таким названием уже существует" }));
   } else {
     next();
-  }
+  };
 }; 
 
 

@@ -44,7 +44,7 @@ categoriesRouter.put(
   checkEmptyName,
   updateCategory,
   sendCategoryUpdated
-)
+);
 
 categoriesRouter.delete(
   "/categories/:id", 

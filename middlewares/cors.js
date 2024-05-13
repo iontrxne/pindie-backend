@@ -1,4 +1,4 @@
-const { PORT } = require('../config')
+const PORT = require('../config');
 
 const allowedCors = [
   `https://practicum.yandex.ru,
@@ -11,7 +11,7 @@ function cors(req, res, next) {
 
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
-  }
+  };
 
 next();
 };
