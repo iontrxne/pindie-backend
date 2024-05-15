@@ -12,7 +12,7 @@ const findAllGames = async (req, res, next) => {
 };
 
 const createGame = async (req, res, next) => {
-  console.log("POST /games");
+  console.log("POST /api/games");
   try {
     console.log(req.body);
     req.game = await games.create(req.body);
@@ -102,7 +102,7 @@ const checkIfUsersAreSafe = async (req, res, next) => {
 
 const checkIsGameExists = async (req, res, next) => {
   const isInArray = req.gamesArray.find((game) => {
-    return req.body.name === game.name;
+    return req.body.title === game.title;
   });
   if (isInArray) {
     res.setHeader("Content-Type", "application/json");
