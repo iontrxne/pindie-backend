@@ -18,6 +18,15 @@ const checkAuth = (req, res, next) => {
   next();
 }; 
 
+const checkCookiesJWT = (req, res, next) => {
+  if (!req.cookies.jwt) {
+    return res.redirect("/");
+  }
+  req.headers.authorization = `Bearer ${req.cookies.jwt}`;
+  next();
+}; 
+
 module.exports = {
   checkAuth,
+  checkCookiesJWT
 }

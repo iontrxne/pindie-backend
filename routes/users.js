@@ -52,6 +52,7 @@ usersRouter.post(
 
 usersRouter.put(
   '/users/:id',
+  findAllUsers,
   checkIsUserExists,
   checkEmptyNameAndEmail,
   checkAuth,
