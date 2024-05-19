@@ -17,7 +17,7 @@ const {
   checkIfCategoriesAvaliable,
   checkIsGameExists
 } = require('../middlewares/games');
-
+const { checkAuth } = require("../middlewares/auth.js");
 
 
 gamesRouter.get(
@@ -38,6 +38,7 @@ gamesRouter.post(
   checkIsGameExists,
   checkIfCategoriesAvaliable,
   checkEmptyFields,
+  checkAuth,
   createGame, 
   sendGameCreated
 );
@@ -48,12 +49,14 @@ gamesRouter.put(
   checkIfUsersAreSafe,
   checkIfCategoriesAvaliable,
   checkEmptyFields,
+  checkAuth,
   updateGame,
   sendGameUpdated
 );
 
 gamesRouter.delete(
   '/games/:id',
+  checkAuth,
   deleteGame,
   sendGameDeleted
 );
