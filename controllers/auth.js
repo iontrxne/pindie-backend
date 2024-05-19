@@ -39,6 +39,10 @@ const sendIndex = (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 };
 
+const sendDashboard = (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/admin/dashboard.html"));
+}; 
+
 module.exports = {
   login,
   sendIndex,
