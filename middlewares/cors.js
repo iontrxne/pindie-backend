@@ -1,10 +1,8 @@
 const PORT = require('../config');
 
 const allowedCors = [
-  `https://practicum.yandex.ru,
-  https://students-projects.ru,
-  localhost:${PORT},
-  localhost:3000`
+  "http://localhost:3000",
+  `http://localhost:${PORT}`,
 ];
 
 function cors(req, res, next) {
