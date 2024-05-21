@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "662d4c60d4d76ef297e7b785"
+  },
+  "username": "test1234",
+  "email": "test1234@mail.ru",
+  "password": "1234",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6606b19ef99cd7a67132aaf6"
+  },
+  "username": "aski",
+  "email": "aski@example.com",
+  "password": "$2a$10$LgqW2yoQxJ6nDBaS8nfM3urShNcn0m95wgyES2lqLw2kXicCHyfmC",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6606b3e0ba5b4c3fa4be6dd5"
+  },
+  "username": "Sobaka",
+  "email": "jav@example.com",
+  "password": "$2a$10$g6PgxfOv1p0xVAi1FCckRuolYB5ImwazvVVhNVisaoxDI9NuAE8oi",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6649fc9441e8362399c873b2"
+  },
+  "username": "1234",
+  "email": "1234@mail.ru",
+  "password": "$2a$10$Vd391M.ixv0POkrci7VnIuXp2zsa0xrq4PRGc.jt4ug8oeoVqW53S",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664a21ef5b4a5623c14ade9f"
+  },
+  "username": "3232",
+  "email": "mfv@mail.ru",
+  "password": "$2a$10$FIPqoqKge/n0Lrn7aNMPBeBvV3gLGfm66uH3Z8DF1o9W8qNx.zwqy",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664a22e55a429fefebcdb4b0"
+  },
+  "username": "222",
+  "email": "85@mail.ru",
+  "password": "$2a$10$MBRyOVATQHrYuqr7xljavOmTPIHWj.AAyC9aup58TY1urTvZEvJXW",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664a24ae8c8eaba1db9634dc"
+  },
+  "username": "22234",
+  "email": "12334@mail.ru",
+  "password": "111",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664a535490828aa5e46d70bb"
+  },
+  "username": "qw",
+  "email": "qw@mail.ru",
+  "password": "$2a$10$FFGNHwZCFst4G5tbW15pH.zQnZd1OBO8E/VDSFiWMceVaYnU.R6ym",
+  "__v": 0
+}]

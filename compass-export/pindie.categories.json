@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "662d5e06d4d76ef297e7b792"
+  },
+  "name": "popular"
+},
+{
+  "_id": {
+    "$oid": "662d5e34d4d76ef297e7b793"
+  },
+  "name": "new"
+},
+{
+  "_id": {
+    "$oid": "662d5e3ed4d76ef297e7b794"
+  },
+  "name": "TDS"
+},
+{
+  "_id": {
+    "$oid": "662d5e45d4d76ef297e7b795"
+  },
+  "name": "pixel"
+},
+{
+  "_id": {
+    "$oid": "662d5e4fd4d76ef297e7b796"
+  },
+  "name": "shooter"
+},
+{
+  "_id": {
+    "$oid": "662d5e59d4d76ef297e7b797"
+  },
+  "name": "runner"
+},
+{
+  "_id": {
+    "$oid": "663928e988bbaad1c9c2d0d4"
+  },
+  "name": "rick owens",
+  "__v": 0
+}]
