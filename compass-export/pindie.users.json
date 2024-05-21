@@ -1,14 +1,5 @@
 [{
   "_id": {
-    "$oid": "662d4c60d4d76ef297e7b785"
-  },
-  "username": "test1234",
-  "email": "test1234@mail.ru",
-  "password": "1234",
-  "__v": 0
-},
-{
-  "_id": {
     "$oid": "6606b19ef99cd7a67132aaf6"
   },
   "username": "aski",
@@ -50,15 +41,6 @@
   "username": "222",
   "email": "85@mail.ru",
   "password": "$2a$10$MBRyOVATQHrYuqr7xljavOmTPIHWj.AAyC9aup58TY1urTvZEvJXW",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "664a24ae8c8eaba1db9634dc"
-  },
-  "username": "22234",
-  "email": "12334@mail.ru",
-  "password": "111",
   "__v": 0
 },
 {
